@@ -1,0 +1,53 @@
+
+---Downloaded files---
+The import files for: Fox Classic were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/wp3
+Data file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/classic/content.xml
+Widget file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/classic/widgets.wie
+Customizer file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/classic/customizer.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+(FOX) About - I&#039;m Sammy - Imported
+(FOX) Social - Social Profile - Imported
+(FOX) Authorlist - Authors - Imported
+(FOX) Ad - Banner Spot - Imported
+post_views_counter_list_widget - Most Viewed Posts - Site does not support widget
+mc4wp_form_widget - Newsletter - Site does not support widget
+Categories - No Title - Imported
+(FOX) Instagram - Instagram - Imported
+
+Page Sidebar : 
+
+(FOX) Pinterest - Sample Pin - Imported
+(FOX) Facebook Likebox - Facebook - Imported
+
+Footer 1 : 
+
+Text - About - Imported
+Gallery - Gallery - Imported
+
+Footer 2 : 
+
+Tag Cloud - No Title - Imported
+
+Footer 3 : 
+
+(FOX) Best Rated - Best Rated - Imported
+
+Footer 4 : 
+
+Recent Comments - Comments - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+

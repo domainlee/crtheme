@@ -1,0 +1,54 @@
+
+---Downloaded files---
+The import files for: Fox Times were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/wp3
+Data file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/times/content.xml
+Widget file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/times/widgets.wie
+Customizer file = /Applications/MAMP/htdocs/wp3/wp-content/themes/fox/inc/demos/times/customizer.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+sidebar-1 : Sidebar does not exist in theme (moving widget to Inactive)
+
+Search - No Title - Imported to Inactive
+Recent Posts - No Title - Imported to Inactive
+Recent Comments - No Title - Imported to Inactive
+Archives - No Title - Imported to Inactive
+Categories - No Title - Widget already exists
+Meta - No Title - Imported to Inactive
+
+Sidebar : 
+
+(FOX) About - About Me - Imported
+(FOX) Instagram - Instagram - Imported
+(FOX) Latest Posts - Latest Opinions - Imported
+(FOX) Ad - Banner - Imported
+Categories - Categories - Imported
+
+Footer 1 : 
+
+(FOX) Authorlist - Authors - Imported
+
+Footer 2 : 
+
+Text - About - Imported
+(FOX) Social - No Title - Imported
+
+Footer 3 : 
+
+Gallery - Gallery - Imported
+
+Footer 4 : 
+
+Tag Cloud - Tags - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+
