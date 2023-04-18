@@ -201,7 +201,7 @@ function crtheme_portfolio_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-		register_sidebar( array(
+    register_sidebar( array(
 		'name'          => sprintf( esc_html__( 'Footer %d', 'crtheme-portfolio' ), 1 ),
 		'id'            => 'footer-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
