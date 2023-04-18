@@ -92,7 +92,7 @@
 */
 
 jQuery(document).ready(function($) {
-    $('#creativ-portfolio-img-container img').click(function() {      
+    $('#crtheme-portfolio-img-container img').click(function() {
         var item_id = $(this).parent().parent().parent().parent().attr('id');
 
         $('#' + item_id).find('li').each(function() {

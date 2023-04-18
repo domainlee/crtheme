@@ -138,7 +138,7 @@ if (class_exists('WP_Customize_Control') && ! class_exists( 'crtheme_portfolio_I
 			<ul class="controls" id='crtheme-portfolio-img-container'>
 				<?php
 				foreach ($this->choices as $value => $label) :
-					$class = ($this->value() == $value) ? 'crtheme-portfolio-radio-img-selected creativ-portfolio-radio-img-img' : 'crtheme-portfolio-radio-img-img';
+					$class = ($this->value() == $value) ? 'crtheme-portfolio-radio-img-selected crtheme-portfolio-radio-img-img' : 'crtheme-portfolio-radio-img-img';
 					?>
 					<li style="display: inline;">
 						<label>
