@@ -2,7 +2,7 @@
  /*
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,19 +16,19 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'crtheme-portfolio' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'creativ-portfolio' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php crtheme_portfolio_posts_tags(); ?>
+	<?php creativ_portfolio_posts_tags(); ?>
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'crtheme-portfolio' ),
+						esc_html__( 'Edit %s', 'creativ-portfolio' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
@@ -39,7 +39,7 @@
 	<?php endif; ?>	
 
 	<div class="entry-meta">
-		<?php crtheme_portfolio_posted_on();
-		crtheme_portfolio_entry_meta(); ?>
+		<?php creativ_portfolio_posted_on();
+		creativ_portfolio_entry_meta(); ?>
 	</div><!-- .entry-meta -->	
 </article><!-- #post-## -->

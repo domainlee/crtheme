@@ -177,7 +177,7 @@ msgid "Default Banner"
 msgstr ""
 
 #: inc/customizer.php:27
-msgid "CRThemes Portfolio Pro"
+msgid "Creativ Portfolio Pro"
 msgstr ""
 
 #: inc/customizer.php:28

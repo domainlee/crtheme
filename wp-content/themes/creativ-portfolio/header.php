@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 /**
-* Hook - crtheme_portfolio_action_doctype.
+* Hook - creativ_portfolio_action_doctype.
 *
-* @hooked crtheme_portfolio_doctype -  10
+* @hooked creativ_portfolio_doctype -  10
 */
-do_action( 'crtheme_portfolio_action_doctype' );
+do_action( 'creativ_portfolio_action_doctype' );
 ?>
 <head>
 <?php
 /**
-* Hook - crtheme_portfolio_action_head.
+* Hook - creativ_portfolio_action_head.
 *
-* @hooked crtheme_portfolio_head -  10
+* @hooked creativ_portfolio_head -  10
 */
-do_action( 'crtheme_portfolio_action_head' );
+do_action( 'creativ_portfolio_action_head' );
 ?>
 
 <?php wp_head(); ?>
@@ -34,34 +34,34 @@ do_action( 'crtheme_portfolio_action_head' );
 <?php
 
 /**
-* Hook - crtheme_portfolio_action_before.
+* Hook - creativ_portfolio_action_before.
 *
-* @hooked crtheme_portfolio_page_start - 10
+* @hooked creativ_portfolio_page_start - 10
 */
-do_action( 'crtheme_portfolio_action_before' );
+do_action( 'creativ_portfolio_action_before' );
 
 /**
 *
-* @hooked crtheme_portfolio_header_start - 10
+* @hooked creativ_portfolio_header_start - 10
 */
-do_action( 'crtheme_portfolio_action_before_header' );
+do_action( 'creativ_portfolio_action_before_header' );
 
 /**
 *
-*@hooked crtheme_portfolio_site_branding - 10
-*@hooked crtheme_portfolio_header_end - 15 
+*@hooked creativ_portfolio_site_branding - 10
+*@hooked creativ_portfolio_header_end - 15 
 */
-do_action('crtheme_portfolio_action_header');
+do_action('creativ_portfolio_action_header');
 
 /**
 *
-* @hooked crtheme_portfolio_content_start - 10
+* @hooked creativ_portfolio_content_start - 10
 */
-do_action( 'crtheme_portfolio_action_before_content' );
+do_action( 'creativ_portfolio_action_before_content' );
 
 /**
  * Banner start
  * 
- * @hooked crtheme_portfolio_banner_header - 10
+ * @hooked creativ_portfolio_banner_header - 10
 */
-do_action( 'crtheme_portfolio_banner_header' );  
+do_action( 'creativ_portfolio_banner_header' );  

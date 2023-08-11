@@ -2,15 +2,15 @@
 /**
  * Skills Section.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-$default = crtheme_portfolio_get_default_theme_options();
+$default = creativ_portfolio_get_default_theme_options();
 
 // Our Services Section
 $wp_customize->add_section( 'section_skills',
 	array(
-	'title'      => __( 'My Skills', 'crtheme-portfolio' ),
+	'title'      => __( 'My Skills', 'creativ-portfolio' ),
 	'priority'   => 100,
 	'capability' => 'edit_theme_options',
 	'panel'      => 'home_page_panel',
@@ -23,13 +23,13 @@ $wp_customize->add_setting('theme_options[enable_skills_section]',
 	'default' 			=> $default['enable_skills_section'],
 	'type'              => 'theme_mod',
 	'capability'        => 'edit_theme_options',
-	'sanitize_callback' => 'crtheme_portfolio_sanitize_checkbox'
+	'sanitize_callback' => 'creativ_portfolio_sanitize_checkbox'
 	)
 );
 
 $wp_customize->add_control('theme_options[enable_skills_section]', 
 	array(		
-	'label' 	=> __('Enable Section', 'crtheme-portfolio'),
+	'label' 	=> __('Enable Section', 'creativ-portfolio'),
 	'section' 	=> 'section_skills',
 	'settings'  => 'theme_options[enable_skills_section]',
 	'type' 		=> 'checkbox',	
@@ -48,10 +48,10 @@ $wp_customize->add_setting('theme_options[skills_section_title]',
 
 $wp_customize->add_control('theme_options[skills_section_title]', 
 	array(
-	'label'       => __('Section Title', 'crtheme-portfolio'),
+	'label'       => __('Section Title', 'creativ-portfolio'),
 	'section'     => 'section_skills',   
 	'settings'    => 'theme_options[skills_section_title]',	
-	'active_callback' => 'crtheme_portfolio_skills_active',		
+	'active_callback' => 'creativ_portfolio_skills_active',		
 	'type'        => 'text'
 	)
 );
@@ -62,16 +62,16 @@ $wp_customize->add_setting('theme_options[skills_section_subtitle]',
 	'default'           => $default['skills_section_subtitle'],
 	'type'              => 'theme_mod',
 	'capability'        => 'edit_theme_options',	
-	'sanitize_callback' => 'crtheme_portfolio_sanitize_textarea_content'
+	'sanitize_callback' => 'creativ_portfolio_sanitize_textarea_content'
 	)
 );
 
 $wp_customize->add_control('theme_options[skills_section_subtitle]', 
 	array(
-	'label'       => __('Section Subtitle', 'crtheme-portfolio'),
+	'label'       => __('Section Subtitle', 'creativ-portfolio'),
 	'section'     => 'section_skills',   
 	'settings'    => 'theme_options[skills_section_subtitle]',	
-	'active_callback' => 'crtheme_portfolio_skills_active',		
+	'active_callback' => 'creativ_portfolio_skills_active',		
 	'type'        => 'textarea'
 	)
 );
@@ -82,18 +82,18 @@ $wp_customize->add_setting('theme_options[number_of_skills_items]',
 	'default' 			=> $default['number_of_skills_items'],
 	'type'              => 'theme_mod',
 	'capability'        => 'edit_theme_options',	
-	'sanitize_callback' => 'crtheme_portfolio_sanitize_number_range'
+	'sanitize_callback' => 'creativ_portfolio_sanitize_number_range'
 	)
 );
 
 $wp_customize->add_control('theme_options[number_of_skills_items]', 
 	array(
-	'label'       => __('Number Of Items', 'crtheme-portfolio'),
-	'description' => __('Save & Refresh the customizer to see its effect. Maximum is 50.', 'crtheme-portfolio'),
+	'label'       => __('Number Of Items', 'creativ-portfolio'),
+	'description' => __('Save & Refresh the customizer to see its effect. Maximum is 50.', 'creativ-portfolio'),
 	'section'     => 'section_skills',   
 	'settings'    => 'theme_options[number_of_skills_items]',		
 	'type'        => 'number',
-	'active_callback' => 'crtheme_portfolio_skills_active',
+	'active_callback' => 'creativ_portfolio_skills_active',
 	'input_attrs' => array(
 			'min'	=> 1,
 			'max'	=> 50,
@@ -102,7 +102,7 @@ $wp_customize->add_control('theme_options[number_of_skills_items]',
 	)
 );
 
-$number_of_skills_items = crtheme_portfolio_get_option( 'number_of_skills_items' );
+$number_of_skills_items = creativ_portfolio_get_option( 'number_of_skills_items' );
 
 for( $i=1; $i<=$number_of_skills_items; $i++ ) {
 
@@ -117,10 +117,10 @@ for( $i=1; $i<=$number_of_skills_items; $i++ ) {
 
 	$wp_customize->add_control('theme_options[skills_title_'.$i.']', 
 		array(
-		'label'       		=> sprintf( __('Skill Title #%1$s', 'crtheme-portfolio'), $i),
+		'label'       		=> sprintf( __('Skill Title #%1$s', 'creativ-portfolio'), $i),
 		'section'     		=> 'section_skills',   
 		'settings'    		=> 'theme_options[skills_title_'.$i.']',		
-		'active_callback' 	=> 'crtheme_portfolio_skills_active',		
+		'active_callback' 	=> 'creativ_portfolio_skills_active',		
 		'type'        		=> 'text'
 		)
 	);
@@ -136,10 +136,10 @@ for( $i=1; $i<=$number_of_skills_items; $i++ ) {
 
 	$wp_customize->add_control('theme_options[skills_percentage_'.$i.']', 
 		array(
-		'label'       		=> sprintf( __('Skill Percentage #%1$s', 'crtheme-portfolio'), $i),
+		'label'       		=> sprintf( __('Skill Percentage #%1$s', 'creativ-portfolio'), $i),
 		'section'     		=> 'section_skills',   
 		'settings'    		=> 'theme_options[skills_percentage_'.$i.']',		
-		'active_callback' 	=> 'crtheme_portfolio_skills_active',		
+		'active_callback' 	=> 'creativ_portfolio_skills_active',		
 		'type'        		=> 'text'
 		)
 	);

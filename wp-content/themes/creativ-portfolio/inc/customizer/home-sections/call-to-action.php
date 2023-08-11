@@ -2,15 +2,15 @@
 /**
  * Call to action section.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-$default = crtheme_portfolio_get_default_theme_options();
+$default = creativ_portfolio_get_default_theme_options();
 
 // Call to action section
 $wp_customize->add_section( 'section_call_to_action',
 	array(
-		'title'      => __( 'Ready to start your project', 'crtheme-portfolio' ),
+		'title'      => __( 'Ready to start your project', 'creativ-portfolio' ),
 		'priority'   => 100,
 		'capability' => 'edit_theme_options',
 		'panel'      => 'home_page_panel',
@@ -22,13 +22,13 @@ $wp_customize->add_setting('theme_options[enable_call_to_action_section]',
 	'default' 			=> $default['enable_call_to_action_section'],
 	'type'              => 'theme_mod',
 	'capability'        => 'edit_theme_options',
-	'sanitize_callback' => 'crtheme_portfolio_sanitize_checkbox'
+	'sanitize_callback' => 'creativ_portfolio_sanitize_checkbox'
 	)
 );
 
 $wp_customize->add_control('theme_options[enable_call_to_action_section]', 
 	array(		
-	'label' 	=> __('Enable Section', 'crtheme-portfolio'),
+	'label' 	=> __('Enable Section', 'creativ-portfolio'),
 	'section' 	=> 'section_call_to_action',
 	'settings'  => 'theme_options[enable_call_to_action_section]',
 	'type' 		=> 'checkbox',	
@@ -47,10 +47,10 @@ $wp_customize->add_setting('theme_options[call_to_action_title]',
 
 $wp_customize->add_control('theme_options[call_to_action_title]', 
 	array(
-	'label'       		=> __('Title', 'crtheme-portfolio'),
+	'label'       		=> __('Title', 'creativ-portfolio'),
 	'section'     		=> 'section_call_to_action',   
 	'settings'    		=> 'theme_options[call_to_action_title]',
-	'active_callback' 	=> 'crtheme_portfolio_call_to_action_active',		
+	'active_callback' 	=> 'creativ_portfolio_call_to_action_active',		
 	'type'        		=> 'text'
 	)
 );
@@ -61,16 +61,16 @@ $wp_customize->add_setting('theme_options[call_to_action_subtitle]',
 	'default'           => $default['call_to_action_subtitle'],
 	'type'              => 'theme_mod',
 	'capability'        => 'edit_theme_options',	
-	'sanitize_callback' => 'crtheme_portfolio_sanitize_textarea_content'
+	'sanitize_callback' => 'creativ_portfolio_sanitize_textarea_content'
 	)
 );
 
 $wp_customize->add_control('theme_options[call_to_action_subtitle]', 
 	array(
-	'label'       => __('Subtitle', 'crtheme-portfolio'),
+	'label'       => __('Subtitle', 'creativ-portfolio'),
 	'section'     => 'section_call_to_action',   
 	'settings'    => 'theme_options[call_to_action_subtitle]',	
-	'active_callback' => 'crtheme_portfolio_call_to_action_active',		
+	'active_callback' => 'creativ_portfolio_call_to_action_active',		
 	'type'        => 'textarea'
 	)
 );
@@ -87,10 +87,10 @@ $wp_customize->add_setting('theme_options[call_to_action_button_label]',
 
 $wp_customize->add_control('theme_options[call_to_action_button_label]', 
 	array(
-	'label'       		=> __('Button Label', 'crtheme-portfolio'),
+	'label'       		=> __('Button Label', 'creativ-portfolio'),
 	'section'     		=> 'section_call_to_action',   
 	'settings'    		=> 'theme_options[call_to_action_button_label]',	
-	'active_callback' 	=> 'crtheme_portfolio_call_to_action_active',	
+	'active_callback' 	=> 'creativ_portfolio_call_to_action_active',	
 	'type'        		=> 'text'
 	)
 );
@@ -106,10 +106,10 @@ $wp_customize->add_setting('theme_options[call_to_action_button_url]',
 
 $wp_customize->add_control('theme_options[call_to_action_button_url]', 
 	array(
-	'label'       		=> __('Button Url', 'crtheme-portfolio'),
+	'label'       		=> __('Button Url', 'creativ-portfolio'),
 	'section'     		=> 'section_call_to_action',   
 	'settings'    		=> 'theme_options[call_to_action_button_url]',	
-	'active_callback' 	=> 'crtheme_portfolio_call_to_action_active',	
+	'active_callback' 	=> 'creativ_portfolio_call_to_action_active',	
 	'type'        		=> 'url'
 	)
 );

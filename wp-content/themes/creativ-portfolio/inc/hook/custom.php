@@ -4,16 +4,16 @@
  *
  * This file contains hook functions attached to theme hooks.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-if( ! function_exists( 'crtheme_portfolio_site_branding' ) ) :
+if( ! function_exists( 'creativ_portfolio_site_branding' ) ) :
 /**
 * Site Branding
 *
 * @since 1.0.0
 */
-function crtheme_portfolio_site_branding() { ?>
+function creativ_portfolio_site_branding() { ?>
     <div class="wrapper">
         <div class="site-branding">
             <div class="site-logo">
@@ -35,7 +35,7 @@ function crtheme_portfolio_site_branding() { ?>
             </div><!-- #site-identity -->
         </div> <!-- .site-branding -->
 
-        <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php echo esc_attr__('Primary Menu', 'crtheme-portfolio'); ?>">
+        <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php echo esc_attr__('Primary Menu', 'creativ-portfolio'); ?>">
             <button type="button" class="menu-toggle">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -47,24 +47,24 @@ function crtheme_portfolio_site_branding() { ?>
                 'theme_location' => 'primary',
                 'menu_id'        => 'primary-menu',
                 'menu_class'     => 'nav-menu',
-                'fallback_cb'    => 'crtheme_portfolio_primary_navigation_fallback',
+                'fallback_cb'    => 'creativ_portfolio_primary_navigation_fallback',
             ) );
             ?>
         </nav><!-- #site-navigation -->
     </div><!-- .wrapper -->
 <?php }
 endif;
-add_action( 'crtheme_portfolio_action_header', 'crtheme_portfolio_site_branding', 10 );
+add_action( 'creativ_portfolio_action_header', 'creativ_portfolio_site_branding', 10 );
 
-if ( ! function_exists( 'crtheme_portfolio_footer_top_section' ) ) :
+if ( ! function_exists( 'creativ_portfolio_footer_top_section' ) ) :
 
   /**
    * Top  Footer 
    *
    * @since 1.0.0
    */
-  function crtheme_portfolio_footer_top_section() {
-      $footer_sidebar_data = crtheme_portfolio_footer_sidebar_class();
+  function creativ_portfolio_footer_top_section() {
+      $footer_sidebar_data = creativ_portfolio_footer_sidebar_class();
       $footer_sidebar    = $footer_sidebar_data['active_sidebar'];
       $footer_class      = $footer_sidebar_data['class'];
       if ( empty( $footer_sidebar ) ) {
@@ -90,19 +90,19 @@ if ( ! function_exists( 'crtheme_portfolio_footer_top_section' ) ) :
  }
 endif;
 
-add_action( 'crtheme_portfolio_action_footer', 'crtheme_portfolio_footer_top_section', 10 );
+add_action( 'creativ_portfolio_action_footer', 'creativ_portfolio_footer_top_section', 10 );
 
-if ( ! function_exists( 'crtheme_portfolio_footer_section' ) ) :
+if ( ! function_exists( 'creativ_portfolio_footer_section' ) ) :
 
   /**
    * Footer copyright
    *
    * @since 1.0.0
    */
-  function crtheme_portfolio_footer_section() { ?>
+  function creativ_portfolio_footer_section() { ?>
     <div class="site-info">    
         <?php 
-            $copyright_footer = crtheme_portfolio_get_option('copyright_text'); 
+            $copyright_footer = creativ_portfolio_get_option('copyright_text'); 
             if ( ! empty( $copyright_footer ) ) {
                 $copyright_footer = wp_kses_data( $copyright_footer );
             }
@@ -115,15 +115,15 @@ if ( ! function_exists( 'crtheme_portfolio_footer_section' ) ) :
   <?php }
 
 endif;
-add_action( 'crtheme_portfolio_action_footer', 'crtheme_portfolio_footer_section', 20 );
+add_action( 'creativ_portfolio_action_footer', 'creativ_portfolio_footer_section', 20 );
 
-if ( ! function_exists( 'crtheme_portfolio_footer_sidebar_class' ) ) :
+if ( ! function_exists( 'creativ_portfolio_footer_sidebar_class' ) ) :
   /**
    * Count the number of footer sidebars to enable dynamic classes for the footer
    *
-   * @since crtheme_portfolio 0.1
+   * @since creativ_portfolio 0.1
    */
-  function crtheme_portfolio_footer_sidebar_class() {
+  function creativ_portfolio_footer_sidebar_class() {
     $data = array();
     $active_sidebar = array();
       $count = 0;
@@ -172,7 +172,7 @@ if ( ! function_exists( 'crtheme_portfolio_footer_sidebar_class' ) ) :
   }
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_excerpt_length' ) ) :
+if ( ! function_exists( 'creativ_portfolio_excerpt_length' ) ) :
 
   /**
    * Implement excerpt length.
@@ -182,13 +182,13 @@ if ( ! function_exists( 'crtheme_portfolio_excerpt_length' ) ) :
    * @param int $length The number of words.
    * @return int Excerpt length.
    */
-  function crtheme_portfolio_excerpt_length( $length ) {
+  function creativ_portfolio_excerpt_length( $length ) {
 
     if ( is_admin() ) {
       return $length;
     }
 
-    $excerpt_length = crtheme_portfolio_get_option( 'excerpt_length' );
+    $excerpt_length = creativ_portfolio_get_option( 'excerpt_length' );
 
     if ( absint( $excerpt_length ) > 0 ) {
       $length = absint( $excerpt_length );
@@ -199,13 +199,13 @@ if ( ! function_exists( 'crtheme_portfolio_excerpt_length' ) ) :
 
 endif;
 
-add_filter( 'excerpt_length', 'crtheme_portfolio_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'creativ_portfolio_excerpt_length', 999 );
 
-if( ! function_exists( 'crtheme_portfolio_banner_header' ) ) :
+if( ! function_exists( 'creativ_portfolio_banner_header' ) ) :
     /**
      * Page Header
     */
-    function crtheme_portfolio_banner_header() { 
+    function creativ_portfolio_banner_header() { 
         if ( is_front_page() && is_home() ){ 
             $header_image = get_header_image();
             $header_image_url = ! empty( $header_image ) ?  $header_image : get_template_directory_uri() . '/assets/images/default-header.jpg';
@@ -214,29 +214,29 @@ if( ! function_exists( 'crtheme_portfolio_banner_header' ) ) :
             return;
         }
         else {
-            $header_image_url = crtheme_portfolio_banner_image( $image_url = '' );
+            $header_image_url = creativ_portfolio_banner_image( $image_url = '' );
         } ?>
 
         <div id="page-site-header" style="background-image: url('<?php echo esc_url( $header_image_url ); ?>');">
             <div class="overlay"></div>
             <header class='page-header'>
                 <div class="wrapper">
-                    <?php crtheme_portfolio_banner_title();?>
+                    <?php creativ_portfolio_banner_title();?>
                 </div><!-- .wrapper -->
             </header>
         </div><!-- #page-site-header -->
         <?php echo '<div id="content-wrapper" class="wrapper"><div class="section-gap clear">';
     }
 endif;
-add_action( 'crtheme_portfolio_banner_header', 'crtheme_portfolio_banner_header', 10 );
+add_action( 'creativ_portfolio_banner_header', 'creativ_portfolio_banner_header', 10 );
 
-if( ! function_exists( 'crtheme_portfolio_banner_title' ) ) :
+if( ! function_exists( 'creativ_portfolio_banner_title' ) ) :
 /**
  * Page Header
 */
-function crtheme_portfolio_banner_title(){ 
+function creativ_portfolio_banner_title(){ 
     if ( ( is_front_page() && is_home() ) || is_home() ){ 
-        $your_latest_posts_title = crtheme_portfolio_get_option( 'your_latest_posts_title' );?>
+        $your_latest_posts_title = creativ_portfolio_get_option( 'your_latest_posts_title' );?>
         <h2 class="page-title"><?php echo esc_html($your_latest_posts_title); ?></h2><?php
     }
 
@@ -250,21 +250,21 @@ function crtheme_portfolio_banner_title(){
     }
 
     if( is_search() ){ ?>
-        <h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'crtheme-portfolio' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+        <h2 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'creativ-portfolio' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
     <?php }
     
     if( is_404() ) {
-        echo '<h2 class="page-title">' . esc_html__( 'Error 404', 'crtheme-portfolio' ) . '</h2>';
+        echo '<h2 class="page-title">' . esc_html__( 'Error 404', 'creativ-portfolio' ) . '</h2>';
     }
 }
 endif;
 
-if( ! function_exists( 'crtheme_portfolio_banner_image' ) ) :
+if( ! function_exists( 'creativ_portfolio_banner_image' ) ) :
 /**
  * Banner Header Image
 */
 
-function crtheme_portfolio_banner_image( $image_url ) {
+function creativ_portfolio_banner_image( $image_url ) {
     global $post;
 
     if ( is_home() && ! is_front_page() ){ 
@@ -292,11 +292,11 @@ function crtheme_portfolio_banner_image( $image_url ) {
 }
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_posts_tags' ) ) :
+if ( ! function_exists( 'creativ_portfolio_posts_tags' ) ) :
     /**
      * Prints HTML with meta information for the current post-date/time and author.
      */
-    function crtheme_portfolio_posts_tags() {
+    function creativ_portfolio_posts_tags() {
         // Hide category and tag text for pages.
         if ( 'post' === get_post_type() && has_tag() ) { ?>
                 <div class="tags-links">

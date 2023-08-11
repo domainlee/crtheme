@@ -33,7 +33,7 @@
  */
 require_once get_template_directory() . '/inc/tgm-plugin/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'crtheme_portfolio_register_required_plugins' );
+add_action( 'tgmpa_register', 'creativ_portfolio_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -52,14 +52,14 @@ add_action( 'tgmpa_register', 'crtheme_portfolio_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function crtheme_portfolio_register_required_plugins() {
+function creativ_portfolio_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
 		array(
-			'name'     => __( 'Contact Form 7', 'crtheme-portfolio' ),
+			'name'     => __( 'Contact Form 7', 'creativ-portfolio' ),
 			'slug'     => 'contact-form-7',
 			'required' => false,
 		),
@@ -75,7 +75,7 @@ function crtheme_portfolio_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'crtheme-portfolio',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'creativ-portfolio',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.

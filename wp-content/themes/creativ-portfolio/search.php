@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 get_header(); ?>

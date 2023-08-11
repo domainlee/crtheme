@@ -8,22 +8,22 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses crtheme_portfolio_header_style()
+ * @uses creativ_portfolio_header_style()
  */
-function crtheme_portfolio_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'crtheme_portfolio_custom_header_args', array(
+function creativ_portfolio_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'creativ_portfolio_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '3a5ee5',
 		'width'                  => 1920,
 		'height'                 => 1080,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'crtheme_portfolio_header_style',
+		'wp-head-callback'       => 'creativ_portfolio_header_style',
 	) ) );
 
 	// Register default headers.
@@ -31,14 +31,14 @@ function crtheme_portfolio_custom_header_setup() {
 		'default-banner' => array(
 			'url'           => '%s/assets/images/default-header.jpg',
 			'thumbnail_url' => '%s/assets/images/default-header.jpg',
-			'description'   => esc_html_x( 'Default Banner', 'header image description', 'crtheme-portfolio' ),
+			'description'   => esc_html_x( 'Default Banner', 'header image description', 'creativ-portfolio' ),
 		),
 
 	) );
 }
-add_action( 'after_setup_theme', 'crtheme_portfolio_custom_header_setup' );
+add_action( 'after_setup_theme', 'creativ_portfolio_custom_header_setup' );
 
-function crtheme_portfolio_header_style() {
+function creativ_portfolio_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*
@@ -63,6 +63,6 @@ function crtheme_portfolio_header_style() {
 		.site-description {
 			color: #" . esc_attr( $header_text_color ) . "}";
 	endif;
-	wp_add_inline_style( 'crtheme-portfolio-style', $custom_css );
+	wp_add_inline_style( 'creativ-portfolio-style', $custom_css );
 }
-add_action( 'wp_enqueue_scripts', 'crtheme_portfolio_header_style' );
+add_action( 'wp_enqueue_scripts', 'creativ_portfolio_header_style' );

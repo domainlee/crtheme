@@ -2,10 +2,10 @@
 /**
  * Sanitization functions.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_select' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_select' ) ) :
 
 	/**
 	 * Sanitize select.
@@ -13,7 +13,7 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_select' ) ) :
 	 * @since 1.0.0
 	 *	
 	 */
-	function crtheme_portfolio_sanitize_select( $input, $setting ) {
+	function creativ_portfolio_sanitize_select( $input, $setting ) {
 
 		// Ensure input is a slug.
 		$input = sanitize_key( $input );
@@ -28,8 +28,8 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_select' ) ) :
 
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_dropdown_pages' ) ) :
-	function crtheme_portfolio_dropdown_pages( $page_id, $setting ) {
+if ( ! function_exists( 'creativ_portfolio_dropdown_pages' ) ) :
+	function creativ_portfolio_dropdown_pages( $page_id, $setting ) {
 	  // Ensure $input is an absolute integer.
 	  $page_id = absint( $page_id );
 	  
@@ -38,18 +38,18 @@ if ( ! function_exists( 'crtheme_portfolio_dropdown_pages' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_dropdown_posts' ) ) :
+if ( ! function_exists( 'creativ_portfolio_dropdown_posts' ) ) :
 
 	/**
 	 * Post Dropdown.
 	 *
 	 * @since 1.0.0	 *
 	 */
-	function crtheme_portfolio_dropdown_posts() {
+	function creativ_portfolio_dropdown_posts() {
 
 		$posts = get_posts( array( 'numberposts' => -1 ) );
 		$choices = array();
-		$choices[0] = esc_html__( '--Select--', 'crtheme-portfolio' );
+		$choices[0] = esc_html__( '--Select--', 'creativ-portfolio' );
 		foreach ( $posts as $post ) {
 			$choices[$post->ID] = $post->post_title;
 		}
@@ -58,7 +58,7 @@ if ( ! function_exists( 'crtheme_portfolio_dropdown_posts' ) ) :
 
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_checkbox' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_checkbox' ) ) :
 
 	/**
 	 * Sanitize checkbox.
@@ -66,7 +66,7 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_checkbox' ) ) :
 	 * @since 1.0.0
 	 *	
 	 */
-	function crtheme_portfolio_sanitize_checkbox( $checked ) {
+	function creativ_portfolio_sanitize_checkbox( $checked ) {
 
 		return ( ( isset( $checked ) && true === $checked ) ? true : false );
 
@@ -75,13 +75,13 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_checkbox' ) ) :
 endif;
 
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_number_range' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_number_range' ) ) :
 
 	/**
 	 * Sanitize number range.
 	 *	
 	 */
-	function crtheme_portfolio_sanitize_number_range( $input, $setting ) {
+	function creativ_portfolio_sanitize_number_range( $input, $setting ) {
 
 		// Ensure input is an absolute integer.
 		$input = absint( $input );
@@ -105,7 +105,7 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_number_range' ) ) :
 
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_textarea_content' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_textarea_content' ) ) :
 
 	/**
 	 * Sanitize textarea content.
@@ -113,14 +113,14 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_textarea_content' ) ) :
 	 * @since 1.0.0
 	 *
 	 */
-	function crtheme_portfolio_sanitize_textarea_content( $input, $setting ) {
+	function creativ_portfolio_sanitize_textarea_content( $input, $setting ) {
 
 		return ( stripslashes( wp_filter_post_kses( addslashes( $input ) ) ) );
 
 	}
 endif;
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_positive_integer' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_positive_integer' ) ) :
 
 	/**
 	 * Sanitize positive integer.
@@ -131,7 +131,7 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_positive_integer' ) ) :
 	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
 	 * @return int Sanitized number; otherwise, the setting default.
 	 */
-	function crtheme_portfolio_sanitize_positive_integer( $input, $setting ) {
+	function creativ_portfolio_sanitize_positive_integer( $input, $setting ) {
 
 		$input = absint( $input );
 
@@ -157,7 +157,7 @@ endif;
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string The image filename if the extension is allowed; otherwise, the setting default.
  */
-function crtheme_portfolio_sanitize_image( $image, $setting ) {
+function creativ_portfolio_sanitize_image( $image, $setting ) {
     /*
      * Array of valid image file types.
      *
@@ -177,15 +177,15 @@ function crtheme_portfolio_sanitize_image( $image, $setting ) {
     return ( $file['ext'] ? $image : $setting->default );
 }
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_sortable' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_sortable' ) ) :
 	/**
 	* Sanitizes strings in array
 	* @param  $input entered value
 	* @return sanitized output
 	*
-	* @since CRThemes Portfolio 1.0
+	* @since Creativ Portfolio 1.0
 	*/
-	function crtheme_portfolio_sanitize_sortable( $input ) {
+	function creativ_portfolio_sanitize_sortable( $input ) {
 
 		// Ensure $input is an array.
 		if ( ! is_array( $input ) )
@@ -204,7 +204,7 @@ endif;
 *
 * @since Creativ Musician 1.0
 */
-function crtheme_portfolio_sanitize_array_int( $input ) {
+function creativ_portfolio_sanitize_array_int( $input ) {
 
 	// Ensure $input is an url.
 	$links = array_map( 'absint', $input );
@@ -212,7 +212,7 @@ function crtheme_portfolio_sanitize_array_int( $input ) {
 	return $links;
 }
 
-if ( ! function_exists( 'crtheme_portfolio_sanitize_phone_number' ) ) :
+if ( ! function_exists( 'creativ_portfolio_sanitize_phone_number' ) ) :
 
 	/**
 	 * Sanitize Phone number.
@@ -220,7 +220,7 @@ if ( ! function_exists( 'crtheme_portfolio_sanitize_phone_number' ) ) :
 	 * @since 1.0.0
 	 *	
 	 */
-	function crtheme_portfolio_sanitize_phone_number( $phone ) {
+	function creativ_portfolio_sanitize_phone_number( $phone ) {
 		return preg_replace( '/[^\d+]/', '', $phone );
 	}
 

@@ -2,15 +2,15 @@
 /**
  * Home Page Options.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-$default = crtheme_portfolio_get_default_theme_options();
+$default = creativ_portfolio_get_default_theme_options();
 
 // Add Panel.
 $wp_customize->add_panel( 'home_page_panel',
 	array(
-	'title'      => __( 'Home Page Sections', 'crtheme-portfolio' ),
+	'title'      => __( 'Home Page Sections', 'creativ-portfolio' ),
 	'priority'   => 100,
 	'capability' => 'edit_theme_options',
 	)

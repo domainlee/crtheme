@@ -4,20 +4,20 @@
  *
  * This file contains hook functions attached to core hooks.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
-if( ! function_exists( 'crtheme_portfolio_primary_navigation_fallback' ) ) :
+if( ! function_exists( 'creativ_portfolio_primary_navigation_fallback' ) ) :
 
 	/**
 	 * Fallback for primary navigation.
 	 *
 	 * @since 1.0.0
 	 */
-	function crtheme_portfolio_primary_navigation_fallback() {
+	function creativ_portfolio_primary_navigation_fallback() {
 		
 		echo '<ul>';
-			echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' .esc_html__( 'Home', 'crtheme-portfolio' ). '</a></li>';
+			echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' .esc_html__( 'Home', 'creativ-portfolio' ). '</a></li>';
 			wp_list_pages( array(
 			'title_li' => '',
 			'depth'    => 1,
@@ -34,9 +34,9 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
   return NULL;
 
 /**
- * Class crtheme_portfolio_Dropdown_Taxonomies_Control
+ * Class creativ_portfolio_Dropdown_Taxonomies_Control
  */
-class crtheme_portfolio_Dropdown_Taxonomies_Control extends WP_Customize_Control {
+class creativ_portfolio_Dropdown_Taxonomies_Control extends WP_Customize_Control {
 
     /**
      * Render the control's content.
@@ -46,9 +46,9 @@ class crtheme_portfolio_Dropdown_Taxonomies_Control extends WP_Customize_Control
     public function render_content() {
         $dropdown = wp_dropdown_categories(
             array(
-                'name'              => 'crtheme-portfolio-dropdown-categories-' . $this->id,
+                'name'              => 'creativ-portfolio-dropdown-categories-' . $this->id,
                 'echo'              => 0,
-                'show_option_none'  => __( '&mdash; Select &mdash;', 'crtheme-portfolio' ),
+                'show_option_none'  => __( '&mdash; Select &mdash;', 'creativ-portfolio' ),
                 'option_none_value' => '0',
                 'selected'          => $this->value(),
                 'hide_empty'        => 0,                   
@@ -76,7 +76,7 @@ class crtheme_portfolio_Dropdown_Taxonomies_Control extends WP_Customize_Control
  *
  * @see WP_Customize_Control
  */
-class crtheme_portfolio_Repeater_Text_Control extends WP_Customize_Control {
+class creativ_portfolio_Repeater_Text_Control extends WP_Customize_Control {
 
     /**
      * Control type.
@@ -107,7 +107,7 @@ class crtheme_portfolio_Repeater_Text_Control extends WP_Customize_Control {
                     <span class="btn-remove-field"><span class="dashicons dashicons-no-alt"></span></span>
                 </div>
             </div>
-            <a href="#" class="button button-primary btn-add-field"><?php esc_html_e( 'Add New', 'crtheme-portfolio' ) ?></a>
+            <a href="#" class="button button-primary btn-add-field"><?php esc_html_e( 'Add New', 'creativ-portfolio' ) ?></a>
         </label><!-- .repeater-text-input -->
         <?php
     }
@@ -116,7 +116,7 @@ class crtheme_portfolio_Repeater_Text_Control extends WP_Customize_Control {
 /**
  * Customizer Controls
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) :
@@ -129,7 +129,7 @@ endif;
  * @since  1.0.0
  * @access public
  */
-class crtheme_portfolio_Customize_Section_Upsell extends WP_Customize_Section {
+class creativ_portfolio_Customize_Section_Upsell extends WP_Customize_Section {
 
     /**
      * The type of customize section being rendered.
@@ -138,7 +138,7 @@ class crtheme_portfolio_Customize_Section_Upsell extends WP_Customize_Section {
      * @access public
      * @var    string
      */
-    public $type = 'crtheme-portfolio-upsell';
+    public $type = 'creativ-portfolio-upsell';
 
     /**
      * Custom button text to output.

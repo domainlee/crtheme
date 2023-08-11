@@ -1,16 +1,16 @@
-=== CRThemes Portfolio ===
+=== Creativ Portfolio ===
 
 Contributors: creativthemes
 Tags: translation-ready, custom-background, theme-options, custom-menu, threaded-comments, featured-images, footer-widgets, left-sidebar, editor-style, right-sidebar, full-width-template, two-columns, custom-colors, custom-header, custom-logo, blog, entertainment, portfolio
 Requires at least: 5.1
 Requires PHP: 5.6
-Tested up to: 6.1
+Tested up to: 6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-CRThemes Portfolio is a personal portfolio WordPress theme that can run a website in authentic manner. This theme is designed to provide you with a presentation of your personal website in the most creative and worthy way. It is a stunning modern portfolio theme we designed so you can showcase your work the way it truly deserves.
+Creativ Portfolio is a personal portfolio WordPress theme that can run a website in authentic manner. This theme is designed to provide you with a presentation of your personal website in the most creative and worthy way. It is a stunning modern portfolio theme we designed so you can showcase your work the way it truly deserves.
 
 == Installation ==
 
@@ -20,7 +20,7 @@ CRThemes Portfolio is a personal portfolio WordPress theme that can run a websit
 
 == Copyright ==
 
-CRThemes Portfolio WordPress Theme, Copyright 2021 Creativ Themes
+Creativ Portfolio WordPress Theme, Copyright 2021 Creativ Themes
 Link: http://www.creativthemes.com/downloads/creativ-portfolio/
 
 Font Awesome 5.9.0 by @davegandy
@@ -57,6 +57,9 @@ Unless otherwise specified, all the theme images are created by us and licensed 
 	Contact Form 7 is recommended to use for contact forms for contact page.
 
 == Changelog ==
+
+= 1.1 - June 18, 2023 =
+* Updated design issue
 
 = 1.0 - Jan 5, 2022 =
 * Initial release

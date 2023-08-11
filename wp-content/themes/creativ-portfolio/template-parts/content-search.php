@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 ?>
@@ -15,7 +15,7 @@
 			<div class="featured-image" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');">
                 <a href="<?php the_permalink();?>" class="post-thumbnail-link"></a>
                 <div class="entry-meta">
-	                <?php crtheme_portfolio_posted_on(); ?>
+	                <?php creativ_portfolio_posted_on(); ?>
 	            </div><!-- .entry-meta -->
             </div><!-- .featured-image -->
 		<?php } ?>

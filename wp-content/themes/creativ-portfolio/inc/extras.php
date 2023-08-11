@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function crtheme_portfolio_body_classes( $classes ) {
+function creativ_portfolio_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -25,63 +25,63 @@ function crtheme_portfolio_body_classes( $classes ) {
 	}
 
 	if ( is_front_page() && is_home() ) {
-		$sidebar_layout_blog = crtheme_portfolio_get_option('layout_options_blog'); 
+		$sidebar_layout_blog = creativ_portfolio_get_option('layout_options_blog'); 
 		$classes[] = esc_attr( $sidebar_layout_blog );
 	}
 
 	if ( !is_front_page() && is_home() ) {
-		$sidebar_layout_blog = crtheme_portfolio_get_option('layout_options_blog'); 
+		$sidebar_layout_blog = creativ_portfolio_get_option('layout_options_blog'); 
 		$classes[] = esc_attr( $sidebar_layout_blog );
 	}
 
 	if( is_archive() || is_search() || is_404() ) {
-		$sidebar_layout_archive = crtheme_portfolio_get_option('layout_options_archive'); 
+		$sidebar_layout_archive = creativ_portfolio_get_option('layout_options_archive'); 
 		$classes[] = esc_attr( $sidebar_layout_archive );
 	}
 
 	if( is_page() ) {
-		$sidebar_layout_page = crtheme_portfolio_get_option('layout_options_page'); 
+		$sidebar_layout_page = creativ_portfolio_get_option('layout_options_page'); 
 		$classes[] = esc_attr( $sidebar_layout_page );
 	}
 
 	if( is_single() ) {
-		$sidebar_layout_single = crtheme_portfolio_get_option('layout_options_single'); 
+		$sidebar_layout_single = creativ_portfolio_get_option('layout_options_single'); 
 		$classes[] = esc_attr( $sidebar_layout_single );
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'crtheme_portfolio_body_classes' );
+add_filter( 'body_class', 'creativ_portfolio_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function crtheme_portfolio_pingback_header() {
+function creativ_portfolio_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'crtheme_portfolio_pingback_header' );
+add_action( 'wp_head', 'creativ_portfolio_pingback_header' );
 
 /**
  * Function to get Sections 
  */
-function crtheme_portfolio_get_sections() {
+function creativ_portfolio_get_sections() {
     $sections = array( 'introduction', 'skills', 'call-to-action' );
     $enabled_section = array();
     foreach ( $sections as $section ) {
     	
-        if (false == crtheme_portfolio_get_option('disable_'.$section.'_section')){
+        if (false == creativ_portfolio_get_option('disable_'.$section.'_section')){
             $enabled_section[] = array(
                 'id' => $section,
-                'menu_text' => esc_html( crtheme_portfolio_get_option('' . $section . '_menu_title','') ),
+                'menu_text' => esc_html( creativ_portfolio_get_option('' . $section . '_menu_title','') ),
             );
         }
     }
     return $enabled_section;
 }
 
-if ( ! function_exists( 'crtheme_portfolio_the_excerpt' ) ) :
+if ( ! function_exists( 'creativ_portfolio_the_excerpt' ) ) :
 
 	/**
 	 * Generate excerpt.
@@ -92,7 +92,7 @@ if ( ! function_exists( 'crtheme_portfolio_the_excerpt' ) ) :
 	 * @param WP_Post $post_obj WP_Post instance (Optional).
 	 * @return string Excerpt.
 	 */
-	function crtheme_portfolio_the_excerpt( $length = 0, $post_obj = null ) {
+	function creativ_portfolio_the_excerpt( $length = 0, $post_obj = null ) {
 
 		global $post;
 
@@ -121,11 +121,11 @@ if ( ! function_exists( 'crtheme_portfolio_the_excerpt' ) ) :
 endif;
 
 //  Customizer Control
-if (class_exists('WP_Customize_Control') && ! class_exists( 'crtheme_portfolio_Image_Radio_Control' ) ) {
+if (class_exists('WP_Customize_Control') && ! class_exists( 'creativ_portfolio_Image_Radio_Control' ) ) {
 	/**
  	* Customize sidebar layout control.
  	*/
-	class crtheme_portfolio_Image_Radio_Control extends WP_Customize_Control {
+	class creativ_portfolio_Image_Radio_Control extends WP_Customize_Control {
 
 		public function render_content() {
 
@@ -135,10 +135,10 @@ if (class_exists('WP_Customize_Control') && ! class_exists( 'crtheme_portfolio_I
 			$name = '_customize-radio-' . $this->id;
 			?>
 			<span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
-			<ul class="controls" id='crtheme-portfolio-img-container'>
+			<ul class="controls" id='creativ-portfolio-img-container'>
 				<?php
 				foreach ($this->choices as $value => $label) :
-					$class = ($this->value() == $value) ? 'crtheme-portfolio-radio-img-selected crtheme-portfolio-radio-img-img' : 'crtheme-portfolio-radio-img-img';
+					$class = ($this->value() == $value) ? 'creativ-portfolio-radio-img-selected creativ-portfolio-radio-img-img' : 'creativ-portfolio-radio-img-img';
 					?>
 					<li style="display: inline;">
 						<label>

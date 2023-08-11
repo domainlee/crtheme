@@ -2,7 +2,7 @@
 /**
  * Load files.
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 /**

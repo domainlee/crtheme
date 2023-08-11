@@ -2,12 +2,12 @@
 /**
  * Skills Section
  *
- *@package CRThemes Portfolio
+ *@package Creativ Portfolio
  */
 
-    $skills_section_title           = crtheme_portfolio_get_option( 'skills_section_title' );
-    $skills_section_subtitle        = crtheme_portfolio_get_option( 'skills_section_subtitle' );
-    $number_of_skills_items         = crtheme_portfolio_get_option( 'number_of_skills_items' ); ?>
+    $skills_section_title           = creativ_portfolio_get_option( 'skills_section_title' );
+    $skills_section_subtitle        = creativ_portfolio_get_option( 'skills_section_subtitle' );
+    $number_of_skills_items         = creativ_portfolio_get_option( 'number_of_skills_items' ); ?>
 
     <?php if( !empty($skills_section_title) || !empty($skills_section_subtitle) ):?>
         <div class="section-header">
@@ -23,8 +23,8 @@
 
     <div class="section-content col-2 clear">
         <?php for( $i=1; $i<=$number_of_skills_items; $i++ ) : 
-            $skills_title[$i]   = crtheme_portfolio_get_option( 'skills_title_'. $i ); 
-            $skills_percentage[$i]  = crtheme_portfolio_get_option( 'skills_percentage_'. $i ); ?>
+            $skills_title[$i]   = creativ_portfolio_get_option( 'skills_title_'. $i ); 
+            $skills_percentage[$i]  = creativ_portfolio_get_option( 'skills_percentage_'. $i ); ?>
             
             <article>
                 <div class="skill-item-wrapper">

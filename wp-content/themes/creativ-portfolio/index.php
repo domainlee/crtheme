@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 get_header(); ?>

@@ -6,25 +6,25 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package CRThemes Portfolio
+ * @package Creativ Portfolio
  */
 
 /**
  *
- * @hooked crtheme_portfolio_footer_start
+ * @hooked creativ_portfolio_footer_start
  */
-do_action( 'crtheme_portfolio_action_before_footer' );
+do_action( 'creativ_portfolio_action_before_footer' );
 
 /**
- * Hooked - crtheme_portfolio_footer_top_section -10
- * Hooked - crtheme_portfolio_footer_section -20
+ * Hooked - creativ_portfolio_footer_top_section -10
+ * Hooked - creativ_portfolio_footer_section -20
  */
-do_action( 'crtheme_portfolio_action_footer' );
+do_action( 'creativ_portfolio_action_footer' );
 
 /**
- * Hooked - crtheme_portfolio_footer_end. 
+ * Hooked - creativ_portfolio_footer_end. 
  */
-do_action( 'crtheme_portfolio_action_after_footer' );
+do_action( 'creativ_portfolio_action_after_footer' );
 
 wp_footer(); ?>
 

@@ -2,18 +2,18 @@
 /**
  * Introduction Section
  *
- *@package CRThemes Portfolio
+ *@package Creativ Portfolio
  */
 
-    $introduction_image        = crtheme_portfolio_get_option( 'introduction_image');
-    $introduction_hero_image   = crtheme_portfolio_get_option( 'introduction_hero_image');
-    $introduction_subtitle     = crtheme_portfolio_get_option( 'introduction_subtitle');
-    $introduction_title        = crtheme_portfolio_get_option( 'introduction_title');
-    $introduction_content      = crtheme_portfolio_get_option( 'introduction_content');
-    $introduction_btn_text_one = crtheme_portfolio_get_option( 'introduction_btn_text_one');
-    $introduction_btn_url_one  = crtheme_portfolio_get_option( 'introduction_btn_url_one');   
-    $introduction_btn_text_two = crtheme_portfolio_get_option( 'introduction_btn_text_two');
-    $introduction_btn_url_two  = crtheme_portfolio_get_option( 'introduction_btn_url_two'); ?>
+    $introduction_image        = creativ_portfolio_get_option( 'introduction_image');
+    $introduction_hero_image   = creativ_portfolio_get_option( 'introduction_hero_image');
+    $introduction_subtitle     = creativ_portfolio_get_option( 'introduction_subtitle');
+    $introduction_title        = creativ_portfolio_get_option( 'introduction_title');
+    $introduction_content      = creativ_portfolio_get_option( 'introduction_content');
+    $introduction_btn_text_one = creativ_portfolio_get_option( 'introduction_btn_text_one');
+    $introduction_btn_url_one  = creativ_portfolio_get_option( 'introduction_btn_url_one');   
+    $introduction_btn_text_two = creativ_portfolio_get_option( 'introduction_btn_text_two');
+    $introduction_btn_url_two  = creativ_portfolio_get_option( 'introduction_btn_url_two'); ?>
 
     <div class="overlay"></div>
     <article style="background-image: url('<?php echo esc_url( $introduction_image); ?>');">

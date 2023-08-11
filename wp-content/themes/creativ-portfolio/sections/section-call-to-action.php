@@ -2,14 +2,14 @@
 /**
  * Call to action section
  *
- *@package CRThemes Portfolio
+ *@package Creativ Portfolio
  */
 ?>
     <?php 
-        $call_to_action_title              = crtheme_portfolio_get_option( 'call_to_action_title' );
-        $call_to_action_subtitle           = crtheme_portfolio_get_option( 'call_to_action_subtitle' );
-        $call_to_action_button_label       = crtheme_portfolio_get_option( 'call_to_action_button_label' );
-        $call_to_action_button_url         = crtheme_portfolio_get_option( 'call_to_action_button_url' );
+        $call_to_action_title              = creativ_portfolio_get_option( 'call_to_action_title' );
+        $call_to_action_subtitle           = creativ_portfolio_get_option( 'call_to_action_subtitle' );
+        $call_to_action_button_label       = creativ_portfolio_get_option( 'call_to_action_button_label' );
+        $call_to_action_button_url         = creativ_portfolio_get_option( 'call_to_action_button_url' );
     ?>
 
     <div class="wrapper">
